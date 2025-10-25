@@ -7,6 +7,7 @@ import { BusinessDetails } from "@/components/BusinessDetails";
 import { GoogleMapsEmbed } from "@/components/GoogleMapsEmbed";
 import { GoogleLinks } from "@/components/GoogleLinks";
 import GMBImageGallery from "@/components/GMBImageGallery";
+import { GMBServicesSection } from "@/components/GMBServicesSection";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -259,6 +260,96 @@ const sampleData = {
     { id: "AF1QipNh07M8808vWfLkp-VWKvB8s-1MuAKXtLis7VeM", img_url: "https://lh5.googleusercontent.com/p/AF1QipNh07M8808vWfLkp-VWKvB8s-1MuAKXtLis7VeM=w1200-h1600", user_id: "102291271332294724313", user_name: "Premium Carpet Cleaning", source: "bizbuilder:gmb_web", type: "", size: [1200, 1600], date_year: 2021, date_month: 7, date_day: 30, date_hour: 8, timestamp: 1627621200 },
     { id: "AF1QipNWcKu8keuVjVKSr5RKAoUlZOriWxIX_yqVXWZP", img_url: "https://lh5.googleusercontent.com/p/AF1QipNWcKu8keuVjVKSr5RKAoUlZOriWxIX_yqVXWZP=w1280-h960", user_id: "107416897282014474673", user_name: "Kiril Natov", source: "photos:local_universal_desktop", type: "", size: [1280, 960], date_year: 2017, date_month: 1, date_day: 8, date_hour: 21, timestamp: 1483902000 },
   ],
+  services: [
+    { name: "Area rug cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "General carpet cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Pet stain & odor removal", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Upholstery cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "2 Bedroom Flat", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Acne Medication", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Air Conditioning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Alkaline Cleaner", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "All Types Of Flooring", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Appliances Cleaned", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Appliances Wiped", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Begin Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Candle Wax", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Car Interior Cleaning Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Clean Driveway", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Cleaning Agents", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Cleaning Chemicals", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Cleaning Job", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Cleaning Machines", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Decking Clean", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Deep Cleaning Services", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Deeper Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Dining Chairs", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Dry Cleaner", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Dye Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Eco-Friendly Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "End Of Tenancy Cleaning Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Experienced Cleaners", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Exterior Window Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Extremely Clean", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Fridge Freezer Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Furniture Moving", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Furniture Polish", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Heavily Soiled Carpets", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Home Furnishings", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Home Mattress", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Home Sofa Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Homes Decor", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Inspection Services", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Interior Windows", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Leather Cleaners", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Leather Conditioner", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Leather Couches", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Leather Restoration Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Leather Sofa", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Living Room", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Mattress Cleaning London", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Mattress Steam Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Non Toxic Cleaning Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Nylon Carpets", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Odor Control", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Odor Neutraliser", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Odour Neutraliser", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Our Office Cleaning Services", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Our Window Cleaning Service", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Oven Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Party Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Patio Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Pet Hairs", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Regular Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Removed Dust", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Rug Treatments", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Rugs Cleaning London", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Safe Flooring", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Sanitizing Treatments", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Second Clean", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Site Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Sofa Cleaning London", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Special Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Special Occasions", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Special Treatments", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Specialised Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spills And Stains", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spot Treat", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spot Treatment", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spots And Stain Removal", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spots Spots", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Spray Clean", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Stain Treatment", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Stain Washing", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Start Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Upholstered Furniture", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Vacuum Cleaner", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Vacuum Cleaning", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Vacuuming The Rug", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Window Treatments", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Wool Carpets", description: "", price: "", category: "Carpet cleaning service" },
+    { name: "Wool Rugs", description: "", price: "", category: "Carpet cleaning service" },
+  ],
 };
 
 const Index = () => {
@@ -302,8 +393,10 @@ const Index = () => {
               totalReviews={sampleData.review_count}
               allReviewsLink={sampleData.links.reviews}
             />
-            <GMBImageGallery images={sampleData.images} />
-          </div>
+          <GMBImageGallery images={sampleData.images} />
+          
+          <GMBServicesSection services={sampleData.services} />
+        </div>
 
           <div className="space-y-6">
             <GoogleMapsEmbed embedUrl={sampleData.embed_url} businessName={sampleData.name} />
