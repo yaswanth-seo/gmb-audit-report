@@ -52,28 +52,28 @@ export const BusinessDetails = ({ data }: BusinessDetailsProps) => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-foreground">Business Information</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground">Business Information</h2>
       
       <Card className="p-6">
         <div className="space-y-4">
           {details.map((detail, idx) => (
-            <div key={idx} className="flex items-start gap-4 p-3 rounded-lg bg-secondary/30">
-              <div className={`${detail.color} bg-background p-2 rounded-lg`}>
-                <detail.icon className="h-5 w-5" />
+            <div key={idx} className="flex items-start gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg bg-secondary/30">
+              <div className={`${detail.color} bg-background p-1.5 sm:p-2 rounded-lg flex-shrink-0`}>
+                <detail.icon className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <div className="flex-1">
-                <p className="text-sm text-muted-foreground mb-1">{detail.label}</p>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-1">{detail.label}</p>
                 {detail.isLink ? (
                   <a
                     href={detail.value}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors font-medium break-all"
+                    className="text-sm sm:text-base text-foreground hover:text-primary transition-colors font-medium break-all"
                   >
                     {detail.value}
                   </a>
                 ) : (
-                  <p className="text-foreground font-medium">{detail.value}</p>
+                  <p className="text-sm sm:text-base text-foreground font-medium break-words">{detail.value}</p>
                 )}
               </div>
             </div>

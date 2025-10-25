@@ -184,40 +184,40 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-6">
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-4 sm:pt-6">
                   <div className="text-center">
-                    <Package className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <div className="text-3xl font-bold text-foreground">{stats.total}</div>
-                    <p className="text-sm text-muted-foreground">Total Products</p>
+                    <Package className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-primary" />
+                    <div className="text-2xl sm:text-3xl font-bold text-foreground">{stats.total}</div>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Total Products</p>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-4 sm:pt-6">
                   <div className="text-center">
-                    <FolderOpen className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <div className="text-3xl font-bold text-foreground">{stats.collections}</div>
-                    <p className="text-sm text-muted-foreground">Collections</p>
+                    <FolderOpen className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-primary" />
+                    <div className="text-2xl sm:text-3xl font-bold text-foreground">{stats.collections}</div>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Collections</p>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-4 sm:pt-6">
                   <div className="text-center">
-                    <FileText className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <div className="text-3xl font-bold text-foreground">{stats.withDescription}</div>
-                    <p className="text-sm text-muted-foreground">With Descriptions</p>
+                    <FileText className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-primary" />
+                    <div className="text-2xl sm:text-3xl font-bold text-foreground">{stats.withDescription}</div>
+                    <p className="text-xs sm:text-sm text-muted-foreground">With Descriptions</p>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="pt-6">
+                <CardContent className="pt-4 sm:pt-6">
                   <div className="text-center">
-                    <ExternalLink className="h-8 w-8 mx-auto mb-2 text-primary" />
-                    <div className="text-3xl font-bold text-foreground">{stats.withUrl}</div>
-                    <p className="text-sm text-muted-foreground">With Website Links</p>
+                    <ExternalLink className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-primary" />
+                    <div className="text-2xl sm:text-3xl font-bold text-foreground">{stats.withUrl}</div>
+                    <p className="text-xs sm:text-sm text-muted-foreground">With Website Links</p>
                   </div>
                 </CardContent>
               </Card>
@@ -250,7 +250,7 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
             {/* Featured Collections Preview */}
             <div>
               <h3 className="font-semibold mb-4">Featured Collections</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 {collections.slice(0, 4).map((collection) => {
                   const firstProduct = collection.products[0];
                   return (
@@ -343,7 +343,7 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
                 </p>
               </div>
             ) : (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {filteredProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
@@ -390,7 +390,7 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
                 <p className="text-muted-foreground">Try selecting a different collection</p>
               </div>
             ) : (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {filteredProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

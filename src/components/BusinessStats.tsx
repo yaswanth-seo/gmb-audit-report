@@ -37,19 +37,19 @@ export const BusinessStats = ({ data }: BusinessStatsProps) => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-foreground">Performance Overview</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground">Performance Overview</h2>
       
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {stats.map((stat, idx) => (
-          <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
-            <div className="flex items-center gap-4">
-              <div className={`${stat.bgColor} ${stat.color} p-3 rounded-lg`}>
-                <stat.icon className="h-6 w-6" />
+          <Card key={idx} className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className={`${stat.bgColor} ${stat.color} p-2 sm:p-3 rounded-lg`}>
+                <stat.icon className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-                <p className="text-3xl font-bold text-foreground">{stat.value}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>
+                <p className="text-2xl sm:text-3xl font-bold text-foreground">{stat.value}</p>
               </div>
             </div>
           </Card>
@@ -57,8 +57,8 @@ export const BusinessStats = ({ data }: BusinessStatsProps) => {
       </div>
 
       {/* Rating Distribution */}
-      <Card className="p-6">
-        <h3 className="text-lg font-semibold mb-4 text-foreground">Rating Distribution</h3>
+      <Card className="p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Rating Distribution</h3>
         <div className="space-y-3">
           {[5, 4, 3, 2, 1].map((rating) => {
             const count = data.review_summary[rating] || 0;

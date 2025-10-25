@@ -53,9 +53,9 @@ export default function GMBPostsSection({ posts }: GMBPostsSectionProps) {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {displayPosts.map((post) => (
-              <CarouselItem key={post.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={post.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
                 <Card className="h-full transition-all duration-200 hover:shadow-lg">
-                  <CardContent className="p-0 flex flex-col h-[400px]">
+                  <CardContent className="p-0 flex flex-col h-[380px] sm:h-[400px]">
                     {/* Image Section */}
                     <div className="relative h-[200px] w-full overflow-hidden rounded-t-lg bg-muted">
                       {post.post_img || (post.gallery && post.gallery[0]) ? (

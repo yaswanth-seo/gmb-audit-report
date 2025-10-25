@@ -73,7 +73,7 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-200/60">
               <Sparkles className="w-4 h-4 text-blue-700" />
             </div>
-            <h2 className="text-lg font-semibold text-foreground">What ChatGPT thinks about your business</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-foreground">What ChatGPT thinks about your business</h2>
           </div>
         </div>
       </CardHeader>
@@ -84,24 +84,24 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
           <div className={isExpanded ? "lg:col-span-2" : ""}>
             <div className="relative">
               {isExpanded ? (
-                <ScrollArea className="h-[500px]">
-                  <div className="text-sm leading-relaxed text-foreground/90 pr-4">
+                <ScrollArea className="h-[400px] sm:h-[500px]">
+                  <div className="text-xs sm:text-sm leading-relaxed text-foreground/90 pr-2 sm:pr-4">
                     {parseContent(content)}
                   </div>
                 </ScrollArea>
               ) : (
                 <>
-                  <div className="text-sm leading-relaxed text-foreground/90 max-h-[240px] overflow-hidden">
+                  <div className="text-xs sm:text-sm leading-relaxed text-foreground/90 max-h-[200px] sm:max-h-[240px] overflow-hidden">
                     {parseContent(content)}
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
                 </>
               )}
             </div>
 
             <Button
               variant="outline"
-              className="w-full mt-4 rounded-full hover:bg-blue-50"
+              className="w-full mt-3 sm:mt-4 rounded-full hover:bg-blue-50 text-sm"
               onClick={() => setIsExpanded(!isExpanded)}
             >
               {isExpanded ? (
@@ -119,8 +119,8 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
           {/* Sources Section - Only show when expanded */}
           {isExpanded && sources.length > 0 && (
             <div className="lg:col-span-1">
-              <h3 className="text-sm font-semibold text-muted-foreground mb-3">Sources</h3>
-              <ScrollArea className="h-[500px]">
+              <h3 className="text-xs sm:text-sm font-semibold text-muted-foreground mb-3">Sources</h3>
+              <ScrollArea className="h-[400px] sm:h-[500px]">
                 <div className="space-y-3 pr-4">
                   {sources.map((source, index) => (
                     <a

@@ -20,7 +20,7 @@ export const CompetitorInsights = ({ competitors }: CompetitorInsightsProps) => 
       <p className="text-sm text-muted-foreground mb-4">
         Similar businesses customers also searched for
       </p>
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {competitors.slice(0, 5).map((competitor, idx) => (
           <a
             key={idx}

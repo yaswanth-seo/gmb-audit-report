@@ -65,7 +65,7 @@ export const GoogleLinks = ({ links }: GoogleLinksProps) => {
           <Button
             key={idx}
             variant="outline"
-            className="w-full justify-start gap-3 h-auto py-3"
+            className="w-full justify-start gap-2 sm:gap-3 h-auto py-2 sm:py-3 text-sm"
             asChild
           >
             <a href={item.url} target="_blank" rel="noopener noreferrer">

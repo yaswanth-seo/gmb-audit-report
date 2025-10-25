@@ -57,20 +57,20 @@ const ReviewFrequencyChart = ({ reviews }: ReviewFrequencyChartProps) => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[300px] w-full">
-          <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+        <ChartContainer config={chartConfig} className="h-[250px] sm:h-[300px] w-full">
+          <BarChart data={chartData} margin={{ top: 10, right: 5, left: -25, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
             <XAxis
               dataKey="month"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
             />
             <YAxis
               tickLine={false}
               axisLine={false}
-              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
               allowDecimals={false}
             />
             <ChartTooltip content={<ChartTooltipContent />} />

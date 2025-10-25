@@ -36,10 +36,10 @@ export const OpeningHours = ({ hours }: OpeningHoursProps) => {
                 isToday ? "bg-primary/5 border border-primary/20" : ""
               }`}
             >
-              <span className={`font-medium ${isToday ? "text-primary" : "text-foreground"}`}>
+              <span className={`text-xs sm:text-sm font-medium ${isToday ? "text-primary" : "text-foreground"}`}>
                 {days[idx]}
               </span>
-              <span className={`${isClosed ? "text-muted-foreground" : "text-foreground"}`}>
+              <span className={`text-xs sm:text-sm ${isClosed ? "text-muted-foreground" : "text-foreground"}`}>
                 {isClosed ? "Closed" : `${formatTime(hour.open)} - ${formatTime(hour.close)}`}
               </span>
             </div>

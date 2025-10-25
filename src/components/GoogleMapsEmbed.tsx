@@ -13,7 +13,7 @@ export const GoogleMapsEmbed = ({ embedUrl, businessName }: GoogleMapsEmbedProps
         <MapPin className="h-5 w-5 text-primary" />
         <h3 className="text-lg font-semibold text-foreground">Business Location</h3>
       </div>
-      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+      <div className="relative w-full h-[250px] sm:h-[300px] md:aspect-[4/3] rounded-lg overflow-hidden">
         <iframe
           src={embedUrl}
           width="100%"

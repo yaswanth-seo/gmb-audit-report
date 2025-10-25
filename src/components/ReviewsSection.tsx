@@ -41,7 +41,7 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-foreground">
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground">
           Customer Reviews {totalReviews && `(${totalReviews})`}
         </h2>
         {displayedReviews.length < (totalReviews || reviews.length) && (
@@ -52,12 +52,12 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
       </div>
 
       <div className="relative">
-        <ScrollArea className="h-[500px] pr-4 border-t border-b border-border/50">
+        <ScrollArea className="h-[400px] sm:h-[500px] pr-2 sm:pr-4 border-t border-b border-border/50">
           <div className="grid gap-4 py-2">
             {displayedReviews.map((review, idx) => (
-            <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex gap-4">
-                <Avatar className="h-12 w-12">
+            <Card key={idx} className="p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+              <div className="flex gap-3 sm:gap-4">
+                <Avatar className="h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0">
                   <AvatarImage src={review.user_photo} alt={review.user_name} />
                   <AvatarFallback>{review.user_name.charAt(0)}</AvatarFallback>
                 </Avatar>
