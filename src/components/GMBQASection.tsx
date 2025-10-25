@@ -47,16 +47,16 @@ export function GMBQASection({ questions }: GMBQASectionProps) {
   const isOwnerResponse = (userName: string) => userName.includes("(Owner)");
 
   return (
-    <Card>
+    <Card className="overflow-hidden">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <MessageSquare className="size-5" />
           Questions & Answers ({totalQuestions})
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 overflow-hidden">
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           <div className="space-y-1">
             <p className="text-sm text-muted-foreground">Total Questions</p>
             <p className="text-2xl font-bold">{totalQuestions}</p>
@@ -88,7 +88,7 @@ export function GMBQASection({ questions }: GMBQASectionProps) {
 
         {/* Questions & Answers List */}
         <div className="relative">
-          <ScrollArea className="h-[500px] pr-4 border-t border-b border-border/50">
+          <ScrollArea className="h-[400px] sm:h-[500px] pr-2 sm:pr-4 border-t border-b border-border/50 overflow-x-hidden">
             <div className="space-y-4">
               {displayedQuestions.map((qa) => (
                 <Card key={qa.id} className="overflow-hidden">
@@ -102,9 +102,9 @@ export function GMBQASection({ questions }: GMBQASectionProps) {
                             <User className="size-4" />
                           </AvatarFallback>
                         </Avatar>
-                        <div className="flex-1 space-y-1">
-                          <p className="text-sm font-medium">{qa.user_name}</p>
-                          <p className="text-base font-semibold">{qa.question}</p>
+                        <div className="flex-1 min-w-0 space-y-1">
+                          <p className="text-sm font-medium break-words">{qa.user_name}</p>
+                          <p className="text-sm sm:text-base font-semibold break-words">{qa.question}</p>
                         </div>
                       </div>
                     </div>
@@ -135,7 +135,7 @@ export function GMBQASection({ questions }: GMBQASectionProps) {
                                     {answer.time_text}
                                   </span>
                                 </div>
-                                <p className="text-sm">{answer.answer}</p>
+                                <p className="text-sm break-words">{answer.answer}</p>
                               </div>
                             </div>
                           );
@@ -163,8 +163,8 @@ export function GMBQASection({ questions }: GMBQASectionProps) {
         {/* Show All Button - Always visible */}
         {hasMore && (
           <Card className="mt-4 p-4 bg-gradient-to-br from-blue-50/50 to-background dark:from-blue-950/20 dark:to-background border-2 border-blue-200 dark:border-blue-800 shadow-md">
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex-1">
+            <div className="flex items-center justify-between gap-3 sm:gap-4 flex-wrap">
+              <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-base text-foreground mb-1">
                   {showAll ? "Showing All Questions" : `View All ${questions.length} Questions`}
                 </h3>
