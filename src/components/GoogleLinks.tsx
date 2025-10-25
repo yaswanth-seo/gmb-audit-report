@@ -55,7 +55,7 @@ export const GoogleLinks = ({ links }: GoogleLinksProps) => {
   ].filter(item => item.url);
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 overflow-hidden">
       <div className="flex items-center gap-2 mb-4">
         <ExternalLink className="h-5 w-5 text-primary" />
         <h3 className="text-lg font-semibold text-foreground">Quick Access Links</h3>

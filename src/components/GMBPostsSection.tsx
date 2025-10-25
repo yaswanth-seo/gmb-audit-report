@@ -49,7 +49,7 @@ export default function GMBPostsSection({ posts }: GMBPostsSectionProps) {
             align: "start",
             loop: false,
           }}
-          className="w-full"
+          className="w-full overflow-hidden"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {displayPosts.map((post) => (

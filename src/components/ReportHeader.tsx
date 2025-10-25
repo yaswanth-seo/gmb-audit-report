@@ -21,7 +21,7 @@ export const ReportHeader = ({ data }: ReportHeaderProps) => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary to-accent p-4 sm:p-6 md:p-8 rounded-lg sm:rounded-xl text-white">
         <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
-          <div className="flex-1 w-full sm:w-auto">
+          <div className="flex-1 min-w-0 w-full sm:w-auto">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold break-words">{data.name}</h1>
               {data.verified === 1 && (

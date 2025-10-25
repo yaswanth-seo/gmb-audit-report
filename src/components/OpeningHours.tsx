@@ -19,7 +19,7 @@ export const OpeningHours = ({ hours }: OpeningHoursProps) => {
   const adjustedToday = today === 0 ? 6 : today - 1;
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 overflow-hidden">
       <div className="flex items-center gap-2 mb-4">
         <Clock className="h-5 w-5 text-primary" />
         <h3 className="text-lg font-semibold text-foreground">Opening Hours</h3>
