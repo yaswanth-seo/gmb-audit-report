@@ -51,7 +51,7 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
         )}
       </div>
 
-      <ScrollArea className="h-[800px] pr-4">
+      <ScrollArea className="h-[500px] pr-4">
         <div className="grid gap-4">
           {displayedReviews.map((review, idx) => (
           <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
@@ -178,29 +178,30 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
             </div>
           </Card>
         ))}
+
+          {/* View All Reviews - Integrated as last item */}
+          {hasMoreReviews && allReviewsLink && (
+            <Card className="p-5 bg-gradient-to-br from-blue-50/50 to-background border-2 border-primary/20 hover:border-primary/30 transition-colors">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex-1">
+                  <h3 className="font-semibold text-base text-foreground mb-1">
+                    View All {totalReviews} Reviews
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    See complete customer feedback on Google Sheets
+                  </p>
+                </div>
+                <Button variant="default" size="sm" asChild>
+                  <a href={allReviewsLink} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View All
+                  </a>
+                </Button>
+              </div>
+            </Card>
+          )}
         </div>
       </ScrollArea>
-
-      {hasMoreReviews && allReviewsLink && (
-        <Card className="p-6 bg-muted/30 border-2 border-dashed">
-          <div className="text-center space-y-3">
-            <h3 className="font-semibold text-lg text-foreground">
-              View All {totalReviews} Reviews
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              See all customer reviews on Google or in our detailed spreadsheet
-            </p>
-            <div className="flex items-center justify-center gap-3">
-              <Button variant="outline" asChild>
-                <a href={allReviewsLink} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View on Google Sheets
-                </a>
-              </Button>
-            </div>
-          </div>
-        </Card>
-      )}
     </div>
   );
 };
