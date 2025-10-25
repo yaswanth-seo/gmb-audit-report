@@ -12,6 +12,7 @@ import { GMBProductsSection } from "@/components/GMBProductsSection";
 import { GMBQASection } from "@/components/GMBQASection";
 import GMBPostsSection from "@/components/GMBPostsSection";
 import ReviewFrequencyChart from "@/components/ReviewFrequencyChart";
+import AIOverviewSection from "@/components/AIOverviewSection";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -1330,7 +1331,56 @@ const sampleData = {
       user_name: "Premium Carpet Cleaning",
       post_type: "regular"
     }
-  ]
+  ],
+  aiOverview: {
+    content: `**Premium Carpet Cleaning** is a highly-rated carpet cleaning service based in London, UK. Here's what makes them stand out:
+
+**Core Services:**
+• Professional carpet cleaning with advanced stain removal techniques
+• Upholstery and sofa cleaning services
+• Commercial carpet cleaning for offices and retail spaces
+• Rug cleaning and restoration
+• Pet stain and odor removal specialists
+
+**Key Strengths:**
+• **Exceptional Customer Reviews**: Maintains a 4.9/5 rating with 52 reviews on Google
+• **Experienced Team**: Led by professional cleaners with 10+ years of experience
+• **Local Service**: Based in SE26 6QQ, London, serving the greater London area
+• **Customer-Focused**: Known for punctuality, professionalism, and friendly service
+• **Quality Guarantee**: Uses professional-grade equipment and eco-friendly solutions
+
+**Customer Feedback Highlights:**
+Customers consistently praise their ability to remove difficult stains, professional approach, and transformative results. Many reviewers note that their carpets "look brand new" after service.
+
+**Accessibility:**
+The business is verified on Google My Business and maintains an active presence with regular posts and prompt responses to customer questions. They offer flexible scheduling and same-day service availability.`,
+    sources: [
+      {
+        title: "Premium Carpet Cleaning - Google Business Profile",
+        url: "https://maps.google.com/?cid=4569775912639662016",
+        domain: "google.com",
+        thumbnail: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
+      },
+      {
+        title: "Customer Reviews & Ratings Analysis",
+        url: "https://www.google.com/maps/reviews",
+        domain: "google.com/reviews",
+        thumbnail: "https://images.unsplash.com/photo-1556742400-b5b0e6ff2fdc?w=400&h=300&fit=crop"
+      },
+      {
+        title: "Carpet Cleaning Services London",
+        url: "https://carpetcleaningslondon.co.uk/",
+        domain: "carpetcleaningslondon.co.uk",
+        thumbnail: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=300&fit=crop"
+      },
+      {
+        title: "Professional Carpet Care Standards",
+        url: "https://example.com/standards",
+        domain: "industry-standards.org",
+        thumbnail: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop"
+      }
+    ]
+  }
 };
 
 const Index = () => {
@@ -1365,6 +1415,13 @@ const Index = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto p-6 space-y-8">
         <ReportHeader data={sampleData} />
+
+        {/* AI Overview Section - Above the fold */}
+        <AIOverviewSection 
+          businessName={sampleData.name}
+          content={sampleData.aiOverview.content}
+          sources={sampleData.aiOverview.sources}
+        />
 
         <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
