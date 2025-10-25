@@ -52,7 +52,7 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
       </div>
 
       <div className="relative">
-        <ScrollArea className="h-[400px] sm:h-[500px] pr-2 sm:pr-4 border-t border-b border-border/50">
+        <ScrollArea className="h-[400px] sm:h-[500px] pr-2 sm:pr-4 border-t border-b border-border/50 overflow-x-hidden">
           <div className="grid gap-4 py-2">
             {displayedReviews.map((review, idx) => (
             <Card key={idx} className="p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow overflow-hidden">

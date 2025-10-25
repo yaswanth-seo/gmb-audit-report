@@ -175,7 +175,7 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="w-full">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="all">All Products</TabsTrigger>
             <TabsTrigger value="collections">By Collection</TabsTrigger>

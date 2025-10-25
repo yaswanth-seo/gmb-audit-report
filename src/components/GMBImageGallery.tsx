@@ -75,7 +75,7 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="stats" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="w-full">
             <TabsTrigger value="stats">Stats Overview</TabsTrigger>
             <TabsTrigger value="gallery">Image Gallery</TabsTrigger>
           </TabsList>
@@ -121,7 +121,7 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
                         style={{ width: `${(ownerImages / totalImages) * 100}%` }}
                       />
                     </div>
-                    <span className="text-base font-semibold min-w-[3rem] text-right">{ownerImages}</span>
+                    <span className="text-base font-semibold w-12 sm:w-14 shrink-0 text-right">{ownerImages}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -133,7 +133,7 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
                         style={{ width: `${(customerImages / totalImages) * 100}%` }}
                       />
                     </div>
-                    <span className="text-base font-semibold min-w-[3rem] text-right">{customerImages}</span>
+                    <span className="text-base font-semibold w-12 sm:w-14 shrink-0 text-right">{customerImages}</span>
                   </div>
                 </div>
               </div>
