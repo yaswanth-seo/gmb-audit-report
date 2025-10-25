@@ -48,9 +48,9 @@ const ProductCard = ({ product }: { product: GMBProduct }) => {
           }}
         />
       </div>
-      <CardContent className="p-4">
+      <CardContent className="p-3 sm:p-4 overflow-hidden">
         <div className="flex items-start justify-between gap-2 mb-2">
-          <h3 className="font-semibold text-base line-clamp-2 flex-1">{product.name}</h3>
+          <h3 className="font-semibold text-sm sm:text-base line-clamp-2 flex-1 break-words">{product.name}</h3>
           {product.price && (
             <Badge variant="secondary" className="shrink-0">{product.price}</Badge>
           )}
@@ -60,29 +60,29 @@ const ProductCard = ({ product }: { product: GMBProduct }) => {
           <Badge variant="outline" className="text-xs">{product.collection_name}</Badge>
         </div>
         {product.description && (
-          <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{product.description}</p>
+          <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 mb-3 sm:mb-4 break-words">{product.description}</p>
         )}
-        <div className="flex gap-2">
-          <a
-            href={product.link_to_product}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 rounded-md text-sm font-medium leading-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 transition-colors"
-          >
-            View on Google
-            <ExternalLink className="size-4" />
-          </a>
-          {product.url && (
-            <a
-              href={product.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center rounded-md text-sm font-medium leading-none border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 transition-colors"
-            >
-              Website
-            </a>
-          )}
-        </div>
+            <div className="flex gap-2">
+              <a
+                href={product.link_to_product}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-0 flex items-center justify-center gap-1 sm:gap-2 rounded-md text-xs sm:text-sm font-medium leading-none bg-primary text-primary-foreground hover:bg-primary/90 h-8 sm:h-9 px-2 sm:px-3 transition-colors"
+              >
+                <span className="truncate">View on Google</span>
+                <ExternalLink className="size-3 sm:size-4 flex-shrink-0" />
+              </a>
+              {product.url && (
+                <a
+                  href={product.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center rounded-md text-xs sm:text-sm font-medium leading-none border border-input bg-background hover:bg-accent hover:text-accent-foreground h-8 sm:h-9 px-2 sm:px-3 transition-colors shrink-0"
+                >
+                  Website
+                </a>
+              )}
+            </div>
       </CardContent>
     </Card>
   );
@@ -276,10 +276,10 @@ export const GMBProductsSection = ({ products }: GMBProductsSectionProps) => {
                           }}
                         />
                       </div>
-                      <CardContent className="p-3">
-                        <p className="font-semibold text-sm line-clamp-1">{collection.name}</p>
-                        <p className="text-xs text-muted-foreground">{collection.count} items</p>
-                      </CardContent>
+                <CardContent className="p-2 sm:p-3">
+                  <p className="font-semibold text-xs sm:text-sm line-clamp-1 break-words">{collection.name}</p>
+                  <p className="text-xs text-muted-foreground">{collection.count} items</p>
+                </CardContent>
                     </Card>
                   );
                 })}

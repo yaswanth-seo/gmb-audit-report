@@ -120,5 +120,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  .card, [class*="Card"] {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }

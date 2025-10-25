@@ -55,26 +55,26 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
         <ScrollArea className="h-[400px] sm:h-[500px] pr-2 sm:pr-4 border-t border-b border-border/50">
           <div className="grid gap-4 py-2">
             {displayedReviews.map((review, idx) => (
-            <Card key={idx} className="p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <Card key={idx} className="p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow overflow-hidden">
               <div className="flex gap-3 sm:gap-4">
                 <Avatar className="h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0">
                   <AvatarImage src={review.user_photo} alt={review.user_name} />
                   <AvatarFallback>{review.user_name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 
-                <div className="flex-1 space-y-3">
+                <div className="flex-1 min-w-0 space-y-3">
                   <div className="flex items-start justify-between flex-wrap gap-2">
                     <div>
                       <div className="flex items-center gap-2">
                         {review.user_link ? (
-                          <a 
-                            href={review.user_link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="font-semibold text-foreground hover:underline"
-                          >
-                            {review.user_name}
-                          </a>
+                <a 
+                  href={review.user_link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-semibold text-sm sm:text-base text-foreground hover:underline break-words"
+                >
+                  {review.user_name}
+                </a>
                         ) : (
                           <h4 className="font-semibold text-foreground">{review.user_name}</h4>
                         )}
@@ -128,7 +128,7 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
                     </div>
                   </div>
 
-                  <p className="text-foreground leading-relaxed">{review.content}</p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed break-words">{review.content}</p>
 
                   {review.review_attributes?.Positive && review.review_attributes.Positive.length > 0 && (
                     <div className="flex flex-wrap gap-2">
@@ -140,18 +140,18 @@ export const ReviewsSection = ({ reviews, totalReviews, allReviewsLink }: Review
                     </div>
                   )}
 
-                  {review.photos && review.photos.length > 0 && (
-                    <div className="flex gap-2 overflow-x-auto pb-2">
-                      {review.photos.map((photo, photoIdx) => (
-                        <img
-                          key={photoIdx}
-                          src={photo}
-                          alt={`Review photo ${photoIdx + 1}`}
-                          className="h-24 w-24 object-cover rounded-lg"
-                        />
-                      ))}
-                    </div>
-                  )}
+            {review.photos && review.photos.length > 0 && (
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-3 sm:-mx-4 md:-mx-6 px-3 sm:px-4 md:px-6">
+                {review.photos.map((photo, photoIdx) => (
+                  <img
+                    key={photoIdx}
+                    src={photo}
+                    alt={`Review photo ${photoIdx + 1}`}
+                    className="h-20 w-20 sm:h-24 sm:w-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                ))}
+              </div>
+            )}
 
                   {review.response_from_owner && (
                     <div className="bg-muted/50 border-l-2 border-primary/50 pl-4 pr-3 py-3 rounded-r-md">
