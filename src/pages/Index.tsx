@@ -10,6 +10,8 @@ import GMBImageGallery from "@/components/GMBImageGallery";
 import { GMBServicesSection } from "@/components/GMBServicesSection";
 import { GMBProductsSection } from "@/components/GMBProductsSection";
 import { GMBQASection } from "@/components/GMBQASection";
+import GMBPostsSection from "@/components/GMBPostsSection";
+import ReviewFrequencyChart from "@/components/ReviewFrequencyChart";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -769,6 +771,566 @@ const sampleData = {
       ]
     }
   ],
+  posts: [
+    {
+      id: "7927509188647564641",
+      content: "Professional Carpet Cleaning Service - Get your carpets looking brand new! Book your appointment today.",
+      post_img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop",
+      content_link: "https://example.com/contact/",
+      content_link_text: "Book",
+      timestamp: 1638800705,
+      time_text: "4 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "7070573536014090451",
+      content: "Professional Rugs Cleaning Service available today. Get your free Quotation!",
+      post_img: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop",
+      content_link: "https://example.com/contact/",
+      content_link_text: "Learn more",
+      timestamp: 1648113680,
+      time_text: "1 month ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "5240076691291523321",
+      content: "Professional Sofa Cleaning Service! Transform your furniture with our expert cleaning.",
+      post_img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+      gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop"],
+      content_link: "https://example.com/upholstery-cleaning/",
+      content_link_text: "Learn more",
+      timestamp: 1645724908,
+      time_text: "2 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "599838117683680631",
+      content: "Professional Sofa Cleaning Service - Expert care for all your upholstery needs.",
+      post_img: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop",
+      content_link: "https://example.com/contact/",
+      content_link_text: "Book",
+      timestamp: 1638800748,
+      time_text: "4 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "post_5",
+      content: "Spring Cleaning Special! Get 20% off all carpet cleaning services this month. Limited time offer.",
+      post_img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&h=600&fit=crop",
+      content_link: "https://example.com/specials/",
+      content_link_text: "Get Offer",
+      timestamp: 1647500000,
+      time_text: "1 month ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "post_6",
+      content: "New Service Alert: We now offer commercial carpet cleaning for offices and retail spaces!",
+      post_img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      content_link: "https://example.com/commercial/",
+      content_link_text: "Learn more",
+      timestamp: 1646800000,
+      time_text: "2 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update",
+      post_link: "https://search.google.com/local/posts"
+    },
+    {
+      id: "post_7",
+      content: "Pet Stain Removal Experts! Your carpets will look and smell fresh again. Safe for pets and children.",
+      post_img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&h=600&fit=crop",
+      content_link: "https://example.com/pet-stain-removal/",
+      content_link_text: "Shop Now",
+      timestamp: 1646200000,
+      time_text: "2 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_8",
+      content: "Customer Appreciation Week! Book any service and get a free room cleaned. Thank you for your loyalty!",
+      post_img: "https://images.unsplash.com/photo-1522158637959-30385a09e0da?w=800&h=600&fit=crop",
+      content_link: "https://example.com/book/",
+      content_link_text: "Book",
+      timestamp: 1645600000,
+      time_text: "3 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "event"
+    },
+    {
+      id: "post_9",
+      content: "Deep Steam Cleaning - The most effective way to remove dirt and allergens from your carpets.",
+      post_img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      content_link: "https://example.com/services/",
+      content_link_text: "Learn more",
+      timestamp: 1645000000,
+      time_text: "3 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_10",
+      content: "Holiday Special: Book before the holidays and save! Make your home sparkle for guests.",
+      post_img: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&h=600&fit=crop",
+      content_link: "https://example.com/holiday-special/",
+      content_link_text: "Get Offer",
+      timestamp: 1644400000,
+      time_text: "3 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer"
+    },
+    {
+      id: "post_11",
+      content: "Eco-Friendly Cleaning Solutions - Safe for your family and the environment!",
+      post_img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=600&fit=crop",
+      content_link: "https://example.com/eco-friendly/",
+      content_link_text: "Learn more",
+      timestamp: 1643800000,
+      time_text: "4 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_12",
+      content: "Tile and Grout Cleaning - Restore your floors to their original beauty!",
+      post_img: "https://images.unsplash.com/photo-1581404554910-ea2e67e0c5db?w=800&h=600&fit=crop",
+      content_link: "https://example.com/tile-cleaning/",
+      content_link_text: "Book",
+      timestamp: 1643200000,
+      time_text: "4 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_13",
+      content: "Same Day Service Available! Need urgent cleaning? We've got you covered.",
+      post_img: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=800&h=600&fit=crop",
+      content_link: "https://example.com/same-day/",
+      content_link_text: "Book Now",
+      timestamp: 1642600000,
+      time_text: "4 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_14",
+      content: "Area Rug Specialists - From Oriental to modern rugs, we handle them all with care.",
+      post_img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      content_link: "https://example.com/area-rugs/",
+      content_link_text: "Learn more",
+      timestamp: 1642000000,
+      time_text: "5 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_15",
+      content: "Free Estimates! Contact us today for a no-obligation quote on any cleaning service.",
+      post_img: "https://images.unsplash.com/photo-1554224311-beee2b9c8a8d?w=800&h=600&fit=crop",
+      content_link: "https://example.com/estimate/",
+      content_link_text: "Get Quote",
+      timestamp: 1641400000,
+      time_text: "5 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_16",
+      content: "Odor Removal Experts - Eliminate stubborn smells with our advanced treatment process.",
+      post_img: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800&h=600&fit=crop",
+      content_link: "https://example.com/odor-removal/",
+      content_link_text: "Learn more",
+      timestamp: 1640800000,
+      time_text: "5 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_17",
+      content: "Join Our Loyalty Program - Earn points with every service and save on future cleanings!",
+      post_img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&h=600&fit=crop",
+      content_link: "https://example.com/loyalty/",
+      content_link_text: "Sign Up",
+      timestamp: 1640200000,
+      time_text: "5 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_18",
+      content: "Mattress Cleaning Service - Sleep better with a professionally cleaned mattress.",
+      post_img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      content_link: "https://example.com/mattress/",
+      content_link_text: "Book",
+      timestamp: 1639600000,
+      time_text: "6 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_19",
+      content: "Water Damage Restoration - 24/7 emergency response for flooding and water damage.",
+      post_img: "https://images.unsplash.com/photo-1584622650653-82c89635c286?w=800&h=600&fit=crop",
+      content_link: "https://example.com/water-damage/",
+      content_link_text: "Call Now",
+      timestamp: 1639000000,
+      time_text: "6 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_20",
+      content: "Stair Carpet Cleaning - Specialized equipment for hard-to-reach areas.",
+      post_img: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
+      content_link: "https://example.com/stairs/",
+      content_link_text: "Learn more",
+      timestamp: 1638400000,
+      time_text: "6 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_21",
+      content: "Auto Upholstery Cleaning - Keep your car interior looking and smelling fresh!",
+      post_img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop",
+      content_link: "https://example.com/auto/",
+      content_link_text: "Book",
+      timestamp: 1637800000,
+      time_text: "6 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_22",
+      content: "Move-In/Move-Out Cleaning Special - Get your deposit back with our thorough cleaning!",
+      post_img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      content_link: "https://example.com/move-out/",
+      content_link_text: "Get Offer",
+      timestamp: 1637200000,
+      time_text: "6 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer"
+    },
+    {
+      id: "post_23",
+      content: "Certified Technicians - All our staff are trained and certified in the latest cleaning methods.",
+      post_img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=600&fit=crop",
+      content_link: "https://example.com/about/",
+      content_link_text: "Learn more",
+      timestamp: 1636600000,
+      time_text: "7 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_24",
+      content: "Allergen Reduction Treatment - Breathe easier with our special allergen removal process.",
+      post_img: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&h=600&fit=crop",
+      content_link: "https://example.com/allergens/",
+      content_link_text: "Learn more",
+      timestamp: 1636000000,
+      time_text: "7 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_25",
+      content: "Family Business - Serving the community for over 20 years with quality and integrity.",
+      post_img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
+      content_link: "https://example.com/about/",
+      content_link_text: "Our Story",
+      timestamp: 1635400000,
+      time_text: "7 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_26",
+      content: "Leather Furniture Cleaning - Preserve and protect your valuable leather pieces.",
+      post_img: "https://images.unsplash.com/photo-1586158291800-2665f07bba79?w=800&h=600&fit=crop",
+      content_link: "https://example.com/leather/",
+      content_link_text: "Book",
+      timestamp: 1634800000,
+      time_text: "7 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_27",
+      content: "Scotchgard Protection - Add a protective layer to keep your carpets cleaner longer!",
+      post_img: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&h=600&fit=crop",
+      content_link: "https://example.com/protection/",
+      content_link_text: "Learn more",
+      timestamp: 1634200000,
+      time_text: "8 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_28",
+      content: "Weekend Appointments Available - We work around your schedule!",
+      post_img: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop",
+      content_link: "https://example.com/booking/",
+      content_link_text: "Book",
+      timestamp: 1633600000,
+      time_text: "8 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_29",
+      content: "Before & After Gallery - See the amazing results we achieve for our customers!",
+      post_img: "https://images.unsplash.com/photo-1565374195076-b6df4e8b4388?w=800&h=600&fit=crop",
+      gallery: ["https://images.unsplash.com/photo-1565374195076-b6df4e8b4388?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&h=600&fit=crop"],
+      content_link: "https://example.com/gallery/",
+      content_link_text: "View Gallery",
+      timestamp: 1633000000,
+      time_text: "8 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_30",
+      content: "Custom Cleaning Plans - Every home is unique. Let us create a plan that fits your needs.",
+      post_img: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
+      content_link: "https://example.com/custom/",
+      content_link_text: "Learn more",
+      timestamp: 1632400000,
+      time_text: "8 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_31",
+      content: "Color Restoration - Bring faded carpets back to life with our color restoration service.",
+      post_img: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop",
+      content_link: "https://example.com/restoration/",
+      content_link_text: "Learn more",
+      timestamp: 1631800000,
+      time_text: "9 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_32",
+      content: "Residential & Commercial - No job too big or small. We handle all types of properties.",
+      post_img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+      content_link: "https://example.com/services/",
+      content_link_text: "Our Services",
+      timestamp: 1631200000,
+      time_text: "9 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_33",
+      content: "Quick Dry Technology - Most carpets dry in just 2-4 hours!",
+      post_img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop",
+      content_link: "https://example.com/technology/",
+      content_link_text: "Learn more",
+      timestamp: 1630600000,
+      time_text: "9 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_34",
+      content: "Gift Certificates Available - The perfect gift for any homeowner!",
+      post_img: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&h=600&fit=crop",
+      content_link: "https://example.com/gift-cards/",
+      content_link_text: "Buy Now",
+      timestamp: 1630000000,
+      time_text: "9 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer"
+    },
+    {
+      id: "post_35",
+      content: "Hardwood Floor Cleaning - Gentle yet effective cleaning for all types of hardwood.",
+      post_img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+      content_link: "https://example.com/hardwood/",
+      content_link_text: "Book",
+      timestamp: 1629400000,
+      time_text: "10 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_36",
+      content: "5-Star Reviews - Join hundreds of satisfied customers! Check out our testimonials.",
+      post_img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      content_link: "https://example.com/reviews/",
+      content_link_text: "Read Reviews",
+      timestamp: 1628800000,
+      time_text: "10 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_37",
+      content: "Seasonal Maintenance Plans - Keep your home fresh year-round with our subscription service.",
+      post_img: "https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?w=800&h=600&fit=crop",
+      content_link: "https://example.com/maintenance/",
+      content_link_text: "Sign Up",
+      timestamp: 1628200000,
+      time_text: "10 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_38",
+      content: "Smoke Damage Cleaning - Restore your home after fire or smoke damage.",
+      post_img: "https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?w=800&h=600&fit=crop",
+      content_link: "https://example.com/smoke-damage/",
+      content_link_text: "Emergency Service",
+      timestamp: 1627600000,
+      time_text: "10 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_39",
+      content: "Green Cleaning Certification - Proud to use environmentally responsible products and methods.",
+      post_img: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop",
+      content_link: "https://example.com/green/",
+      content_link_text: "Learn more",
+      timestamp: 1627000000,
+      time_text: "11 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_40",
+      content: "Drapery & Curtain Cleaning - Professional cleaning for all window treatments.",
+      post_img: "https://images.unsplash.com/photo-1534889156217-d643df14f14a?w=800&h=600&fit=crop",
+      content_link: "https://example.com/drapery/",
+      content_link_text: "Book",
+      timestamp: 1626400000,
+      time_text: "11 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_41",
+      content: "Senior Citizen Discount - 15% off for seniors! Ask about our special rates.",
+      post_img: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop",
+      content_link: "https://example.com/discounts/",
+      content_link_text: "Get Discount",
+      timestamp: 1625800000,
+      time_text: "11 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "offer"
+    },
+    {
+      id: "post_42",
+      content: "Spot Cleaning Tips - Learn how to handle small spills before they become stains!",
+      post_img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      content_link: "https://example.com/blog/tips/",
+      content_link_text: "Read More",
+      timestamp: 1625200000,
+      time_text: "11 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_43",
+      content: "Van Equipment Tour - See the professional equipment we use for superior results!",
+      post_img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop",
+      content_link: "https://example.com/equipment/",
+      content_link_text: "Watch Video",
+      timestamp: 1624600000,
+      time_text: "12 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_44",
+      content: "Wine & Coffee Stain Removal - We've seen it all and can remove the toughest stains!",
+      post_img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&h=600&fit=crop",
+      content_link: "https://example.com/stain-removal/",
+      content_link_text: "Learn more",
+      timestamp: 1624000000,
+      time_text: "12 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_45",
+      content: "New Location Opening Soon - Expanding to serve you better! Stay tuned for details.",
+      post_img: "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&h=600&fit=crop",
+      content_link: "https://example.com/news/",
+      content_link_text: "Read More",
+      timestamp: 1623400000,
+      time_text: "12 months ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "event"
+    },
+    {
+      id: "post_46",
+      content: "Insurance Claims Assistance - We work directly with insurance companies for damage claims.",
+      post_img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop",
+      content_link: "https://example.com/insurance/",
+      content_link_text: "Learn more",
+      timestamp: 1622800000,
+      time_text: "1 year ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_47",
+      content: "Customer Safety First - All our technicians are background checked and insured.",
+      post_img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
+      content_link: "https://example.com/safety/",
+      content_link_text: "Learn more",
+      timestamp: 1622200000,
+      time_text: "1 year ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_48",
+      content: "Post-Construction Cleaning - Remove dust and debris after renovation or construction work.",
+      post_img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop",
+      content_link: "https://example.com/construction/",
+      content_link_text: "Book",
+      timestamp: 1621600000,
+      time_text: "1 year ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    },
+    {
+      id: "post_49",
+      content: "Flexible Payment Options - We accept all major credit cards and offer financing!",
+      post_img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      content_link: "https://example.com/payment/",
+      content_link_text: "Learn more",
+      timestamp: 1621000000,
+      time_text: "1 year ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "update"
+    },
+    {
+      id: "post_50",
+      content: "Thank You to Our Loyal Customers - Celebrating another great year serving the community!",
+      post_img: "https://images.unsplash.com/photo-1528605105345-5344ea20e269?w=800&h=600&fit=crop",
+      content_link: "https://example.com/about/",
+      content_link_text: "Our Story",
+      timestamp: 1620400000,
+      time_text: "1 year ago",
+      user_name: "Premium Carpet Cleaning",
+      post_type: "regular"
+    }
+  ]
 };
 
 const Index = () => {
@@ -805,8 +1367,8 @@ const Index = () => {
         <ReportHeader data={sampleData} />
 
         <div className="grid lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 space-y-6">
-            <BusinessStats data={sampleData} reviews={sampleData.reviews} />
+        <div className="lg:col-span-2 space-y-6">
+          <BusinessStats data={sampleData} />
             <ReviewsSection 
               reviews={sampleData.reviews} 
               totalReviews={sampleData.review_count}
@@ -818,11 +1380,16 @@ const Index = () => {
           <GMBServicesSection services={sampleData.services} />
           
           <GMBProductsSection products={sampleData.products} />
+          
+          <GMBPostsSection posts={sampleData.posts} />
         </div>
 
           <div className="space-y-6">
             <GoogleMapsEmbed embedUrl={sampleData.embed_url} businessName={sampleData.name} />
             <GoogleLinks links={sampleData.links} />
+            
+            <ReviewFrequencyChart reviews={sampleData.reviews} />
+            
             <OpeningHours hours={sampleData.open_hours} />
             <BusinessDetails data={sampleData} />
             <CompetitorInsights competitors={sampleData.also_search_for} />
