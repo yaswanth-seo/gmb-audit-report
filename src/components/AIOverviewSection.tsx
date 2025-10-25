@@ -79,9 +79,9 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
       </CardHeader>
 
       <CardContent>
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className={isExpanded ? "grid lg:grid-cols-3 gap-6" : ""}>
           {/* Main Content Area */}
-          <div className="lg:col-span-2">
+          <div className={isExpanded ? "lg:col-span-2" : ""}>
             <div className="relative">
               {isExpanded ? (
                 <ScrollArea className="h-[500px]">
@@ -116,47 +116,49 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
             </Button>
           </div>
 
-          {/* Sources Section */}
-          {sources.length > 0 && (
+          {/* Sources Section - Only show when expanded */}
+          {isExpanded && sources.length > 0 && (
             <div className="lg:col-span-1">
               <h3 className="text-sm font-semibold text-muted-foreground mb-3">Sources</h3>
-              <div className="space-y-3">
-                {sources.slice(0, 4).map((source, index) => (
-                  <a
-                    key={index}
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    <Card className="overflow-hidden hover:shadow-md transition-all duration-200 hover:scale-[1.02] bg-white/80 backdrop-blur">
-                      <div className="flex gap-3 p-3">
-                        {source.thumbnail && (
-                          <div className="flex-shrink-0 w-16 h-16 rounded overflow-hidden bg-muted">
-                            <img
-                              src={source.thumbnail}
-                              alt={source.title}
-                              className="w-full h-full object-cover"
-                              loading="lazy"
-                            />
-                          </div>
-                        )}
-                        <div className="flex-1 min-w-0">
-                          <p className="text-xs font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">
-                            {source.title}
-                          </p>
-                          <div className="flex items-center gap-1 mt-1">
-                            <Badge variant="secondary" className="text-xs px-2 py-0">
-                              {source.domain}
-                            </Badge>
-                            <ExternalLink className="w-3 h-3 text-muted-foreground" />
+              <ScrollArea className="h-[500px]">
+                <div className="space-y-3 pr-4">
+                  {sources.map((source, index) => (
+                    <a
+                      key={index}
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group"
+                    >
+                      <Card className="overflow-hidden hover:shadow-md transition-all duration-200 hover:scale-[1.02] bg-white/80 backdrop-blur">
+                        <div className="flex gap-3 p-3">
+                          {source.thumbnail && (
+                            <div className="flex-shrink-0 w-16 h-16 rounded overflow-hidden bg-muted">
+                              <img
+                                src={source.thumbnail}
+                                alt={source.title}
+                                className="w-full h-full object-cover"
+                                loading="lazy"
+                              />
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+                              {source.title}
+                            </p>
+                            <div className="flex items-center gap-1 mt-1">
+                              <Badge variant="secondary" className="text-xs px-2 py-0">
+                                {source.domain}
+                              </Badge>
+                              <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Card>
-                  </a>
-                ))}
-              </div>
+                      </Card>
+                    </a>
+                  ))}
+                </div>
+              </ScrollArea>
             </div>
           )}
         </div>
