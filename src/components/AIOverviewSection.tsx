@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sparkles, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 
 interface AISource {
@@ -35,7 +36,7 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
         if (match.index > lastIndex) {
           parts.push(line.substring(lastIndex, match.index));
         }
-        parts.push(<strong key={`bold-${index}-${match.index}`} className="font-semibold text-foreground">{match[1]}</strong>);
+        parts.push(<strong key={`bold-${index}-${match.index}`} className="font-semibold text-blue-900">{match[1]}</strong>);
         lastIndex = match.index + match[0].length;
       }
       if (lastIndex < line.length) {
@@ -65,14 +66,14 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
   };
 
   return (
-    <Card className="overflow-hidden border-blue-100 bg-gradient-to-br from-blue-50/50 via-white to-white shadow-sm hover:shadow-md transition-all duration-300">
+    <Card className="overflow-hidden border-l-4 border-l-blue-500 border-blue-200 bg-gradient-to-br from-blue-100/60 via-blue-50/30 to-white shadow-sm hover:shadow-md transition-all duration-300">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100/50">
-              <Sparkles className="w-4 h-4 text-blue-600" />
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-200/60">
+              <Sparkles className="w-4 h-4 text-blue-700" />
             </div>
-            <h2 className="text-lg font-semibold text-foreground">AI Overview</h2>
+            <h2 className="text-lg font-semibold text-foreground">What ChatGPT thinks about your business</h2>
           </div>
         </div>
       </CardHeader>
@@ -82,16 +83,19 @@ export default function AIOverviewSection({ businessName, content, sources = [] 
           {/* Main Content Area */}
           <div className="lg:col-span-2">
             <div className="relative">
-              <div 
-                className={`text-sm leading-relaxed text-foreground/90 transition-all duration-300 ${
-                  isExpanded ? '' : 'max-h-[300px] overflow-hidden'
-                }`}
-              >
-                {parseContent(content)}
-              </div>
-              
-              {!isExpanded && (
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
+              {isExpanded ? (
+                <ScrollArea className="h-[500px]">
+                  <div className="text-sm leading-relaxed text-foreground/90 pr-4">
+                    {parseContent(content)}
+                  </div>
+                </ScrollArea>
+              ) : (
+                <>
+                  <div className="text-sm leading-relaxed text-foreground/90 max-h-[240px] overflow-hidden">
+                    {parseContent(content)}
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none" />
+                </>
               )}
             </div>
 
