@@ -8,6 +8,7 @@ import { GoogleMapsEmbed } from "@/components/GoogleMapsEmbed";
 import { GoogleLinks } from "@/components/GoogleLinks";
 import GMBImageGallery from "@/components/GMBImageGallery";
 import { GMBServicesSection } from "@/components/GMBServicesSection";
+import { GMBProductsSection } from "@/components/GMBProductsSection";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -229,6 +230,281 @@ const sampleData = {
     reviews: "https://search.google.com/local/reviews?placeid=ChIJR4ox4_gddkgRwAcGGPsaaz8",
     reviews_write: "https://search.google.com/local/writereview?placeid=ChIJR4ox4_gddkgRwAcGGPsaaz8",
   },
+  products: [
+    {
+      id: "-8309482220366508092",
+      name: "Amethyst Necklace",
+      description: "Happy birthday to all of our February babies! This 14k white gold necklace boasts a 5.62ct oval amethyst as well as .41ctw of round brilliant cut diamonds. This pendant is perfect for anyone who loves to make a bright and colorful statement.",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XCIFSn-7y1FrCe7bCKaMBXgBdvAOQDJtlrBYJPvRt7qaDV5dBJqnYIzVR1826h6tVNr---UVUM4BxM525r3mPVuIQ",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-8309482220366508092",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "-2836232707872109235",
+      name: "Heart Pendant",
+      description: "Valentine's Day is here! This 14k white gold heart pendant is made up of .17 cts of round brilliant cut diamonds. This necklace is a beautiful way to let that special person in your life know that they have your heart.",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAuRKI6KBnIYW_EhaagpZHStztrRHxekzeR_-JGH9gbNSDck996kmn0_CuPOmpK03IeQCod4VsBXyKXZ7wI4q-Xuw",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-2836232707872109235",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "3836438590382249679",
+      name: "Multi Color Sapphire and Diamond Baguette Pendant",
+      description: "Chase away the winter blues with this multi color sapphire and diamond pendant. Set in 14k yellow gold with .12ct of baguette diamonds, this piece will add a pop of color to your every day wardrobe.",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBIgskLx4BhMk3rOQabODKLvOxYkiXbmDxkdwdzrO3Ly7bqtZAejmdwh2XGbs5kNBAPsdVnkmoH0Xskq24weFAtuA",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=3836438590382249679",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "8433782160159805723",
+      name: "Blue Sapphire Flower Pendant",
+      description: "This 14k white gold pendant is made up of 2.10 carats of beautiful blue sapphires and round brilliant cut diamonds. A stunning piece to remind you that Spring is right around the corner!",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XCrgY0OuV2_qswCaO8NtmmQwD2L7_FsIWhfWrF2you7gifZLBxPsXAX2-Wbpwg5b7EvGOpFVhLz0PpxzM-s0V8Kdg",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=8433782160159805723",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "-4067767917384692012",
+      name: "Diamond Pendant",
+      description: "Here, we have an impressive ladies diamond necklace, which boasts .25 carat total weight of round, brilliant cut diamonds. This drop-style pendant is suspended from an 18\" 14K white gold chain. This charming piece will be sure to add sparkle to your holiday season!",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBvP64t-xGsQPB5hFNzZa4L0BnYnSqXPeywua43HPoZs-FMLd1CA2usK28kqjSkQHVl5x0swHxPas4OM-f8SuuDVw",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-4067767917384692012",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "2480337038001911855",
+      name: "Confetti Collection",
+      description: "Summer is here which means no more layering of clothes, so lets layer our necklaces! These 2 new beauties are part of the confetti collection. Both are 14k white gold, one is set with diamonds while the other is set with multi color sapphires.",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBEx-wpAZ4GGCbv3rQiC0rs8lMSc5xCjAIkDNkHj6BZrnRE5zG1U4VDlBurEwQ7-f-2r5lgP7ADRcWFm76Ft1P2cQ",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=2480337038001911855",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "2814976103048878581",
+      name: "Custom Necklace",
+      description: "Custom Monogram Necklace",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XDjlbt6z4Pp4bDP7zQj6HGz9fdqRnwMOQYceYGOPedfS9Iyu2VysMIUeO2PWu2omYEMLXjvyez4mdqOhYAfJjXSWQ",
+      url: "",
+      btn: "",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=2814976103048878581",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "-6326845978526059297",
+      name: "Custom Diamond Pendant",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBRhh8YojiQt-91rnXt04sex4JfQJN9HHprrKIMnvtL0yVJILKmp7_4vbbi1z48Nn5dzlYhmu8csFDH0EL64bAWWw",
+      url: "https://barbaraoliverandco.com/pendants-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-6326845978526059297",
+      collection_id: "379022455",
+      collection_name: "Pendants",
+      collection_description: ""
+    },
+    {
+      id: "6320417207774489901",
+      name: "Diamond Earrings",
+      description: "Beautifully matched, the above cluster earrings carry a .72 carat total weight of near-colorless round, brilliant cut diamonds. These lovely earrings are made up of 14K white gold and will make any occasion special!",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XDguTBrhLPjF0W4gO5un4Ss5ltT5wKWrt6-eChVW-PibFsOKorzycgJzDTSQUauraaOS-xL2o4uGPb7z901ja_27g",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=6320417207774489901",
+      collection_id: "739385651",
+      collection_name: "Earrings",
+      collection_description: ""
+    },
+    {
+      id: "-278315832047905124",
+      name: "Emerald Cut Diamond Earrings",
+      description: "The stunning earrings showcase 1.31 carat total weight of beautiful emerald cut diamond set in 18k white gold. These earrings are sure to give you that little extra sparkle and shine we all love!",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAdlcvKB6MWrFYx-RcKVKFwcuQEOeqjJNUXwqJgvHqjg6z6Komj6G6SOrZE0-pE0b5iEOheXS53SO-S97QOJgV9jQ",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-278315832047905124",
+      collection_id: "739385651",
+      collection_name: "Earrings",
+      collection_description: ""
+    },
+    {
+      id: "6871615424937439910",
+      name: "Marquis Dangle Earrings",
+      description: "These perfectly matched marquis diamond earrings are 1.75 carat total weight and set in 14k white gold. These earrings are sure to make any night out a special night!",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XCm49WmhDctiL-YEkp5QAn9GmxI6VPPbHxw1bBvxm_E93hk04yyn7NHIYyOpJJbVdr1Xcs87Ku3DK61e0Z1qtl2NQ",
+      url: "http://www.barbaraoliverjewelry.com/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=6871615424937439910",
+      collection_id: "739385651",
+      collection_name: "Earrings",
+      collection_description: ""
+    },
+    {
+      id: "-4779429887048919552",
+      name: "Custom Rings",
+      description: "Custom Mother's Ring Talk to Barbara about your custom design today! Call 716-204-1297",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XCQwGA3KyB2NOlWJHziEqmr3Gx90_b50TLFPBV6D6rg3EgjyrEuxczTitQ4_rEFWwYAbpc7DSgWOiBqWV7rNbh9kQ",
+      url: "https://barbaraoliverandco.com/custom-jewelry-design/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-4779429887048919552",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "-4517928176725427392",
+      name: "Custom Ring",
+      description: "Custom Diamond Leaf Design",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XC4mOL7qAteV4ytaWEAhebLo0Z0RbvYgSRoL0LFsw2IFaKNafUjdhQ3bfSc3imcPlO328FwzuuUnB3hebkCLAnovQ",
+      url: "",
+      btn: "",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-4517928176725427392",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "6515119873915337334",
+      name: "Custom Wedding Rings",
+      description: "From grandma's heart to granddaughters' new custom wedding bands. See how your vintage jewelry can become your treasured heirloom - Call 716-204-1297.",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XASaNvSPNqCJRY_85U2cpCt9C0CjdncfcD-Sgg34HEPwkrkts-90u3o9ML24g9m_yn9zm34vqBrthTHV7PM5MvwPA",
+      url: "",
+      btn: "",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=6515119873915337334",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "-5474675937794079655",
+      name: "Custom Ring - Tulips & Music",
+      description: "Call Barbara for Your Custom Design 716-204-1297",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAYLP2mCb-wTBR94TdOi22R1BDN9WJifZYbC312dNEa8K-6EPc8M_jRS2UX_4qvKru5CpbupCIPu_TCwKf4dkjOJA",
+      url: "",
+      btn: "",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-5474675937794079655",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "1207897426149811229",
+      name: "Custom Ring",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBiV-RQHeWLqOC6J71zVINGNvki4o-3QTALAG4HHPIFpn63rMQnLqlsnFjZdDoIvwLPesPcYdvcfpO3wHGILMBG-w",
+      url: "https://barbaraoliverandco.com/rings-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=1207897426149811229",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "-7689722703997433154",
+      name: "Custom Ring",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XDbpqvlDjSpimGOBVwWkJvcN-cdoZM6b3bT-8jxnV9uF8sihYorBl9U2jL_3xmrd4e-5UlwNyXxSbDa5CPLj8l02g",
+      url: "https://barbaraoliverandco.com/rings-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-7689722703997433154",
+      collection_id: "939669804",
+      collection_name: "Custom Rings",
+      collection_description: ""
+    },
+    {
+      id: "5596246028526877896",
+      name: "Stackable Rings",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAHAprBl_3eSiTZuuBmWBWpS0ZoO_HiYBvlL7D971pe8NA11rXVLUIGmxIngVxip-Xd1Q9Tah8hLlbz878-m957Rg",
+      url: "",
+      btn: "",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=5596246028526877896",
+      collection_id: "78965795",
+      collection_name: "Rings",
+      collection_description: ""
+    },
+    {
+      id: "1221883530543627332",
+      name: "Bracelet",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAxxY4iaBK4r2zdrxy1n3gVmAgLriEcKVjl-EoFDjP2Pshuh8aAbSeTW3ZrBBbnA6ecS3CJBFWQwD7ZNYHni2q7YA",
+      url: "https://barbaraoliverandco.com/bracelets-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=1221883530543627332",
+      collection_id: "903395915",
+      collection_name: "Bracelets",
+      collection_description: ""
+    },
+    {
+      id: "-3555059755495763551",
+      name: "Custom Earrings/Bracelet Set",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XBSosOplrQ1l4wHUk3c71AQBZJuMyIZA2jHF7Pal5KBjxeuZCjkqvmjluoOXAWAeRuljJeAeJiEpk7YsRWidkao1A",
+      url: "https://barbaraoliverandco.com/earrings-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=-3555059755495763551",
+      collection_id: "1326398076",
+      collection_name: "Custom Earrings",
+      collection_description: ""
+    },
+    {
+      id: "739072577167775811",
+      name: "Diamond Engagement Ring",
+      description: "",
+      price: "",
+      image: "https://lh3.googleusercontent.com/glsgmb/AJtb4XAHaY60favLUHrhQMVYKEnZpb2GLYAb9JmpXap-XQTr6c9TGG56a7Rr3gLIbPHPgLnZjJpTf8U2bt6lMT2fWb7PLQ",
+      url: "https://barbaraoliverandco.com/engagement-rings-gallery/",
+      btn: "Learn more",
+      link_to_product: "https://www.google.com/search?q=42.964635%2C+-78.736418+Barbara+Oliver+Jewelry&ludocid=3291747407840809159&ie=UTF-8#ludocid=3291747407840809159&lpc=lpc&prid=739072577167775811",
+      collection_id: "673763038",
+      collection_name: "Engagement Rings",
+      collection_description: ""
+    }
+  ],
   embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75931.9600640659!2d-2.472455102734396!3d53.5064506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42bc3ace0ff2e86d%3A0xcf06ff10890a2c84!2sSupreme%20Carpet%20Care%20ltd!5e0!3m2!1sen!2suk!4v1761405541042!5m2!1sen!2suk",
   images: [
     { id: "AF1QipOT5KmvH3sk4DIAvXD6ClpvwxzOclRedVqdOst0", img_url: "https://lh5.googleusercontent.com/p/AF1QipOT5KmvH3sk4DIAvXD6ClpvwxzOclRedVqdOst0=w5472-h3648", user_id: "102291271332294724313", user_name: "Premium Carpet Cleaning", source: "bizbuilder:gmb_web", type: "360", size: [5472, 3648], date_year: 2022, date_month: 3, date_day: 24, date_hour: 9, timestamp: 1648105200 },
@@ -396,6 +672,8 @@ const Index = () => {
           <GMBImageGallery images={sampleData.images} />
           
           <GMBServicesSection services={sampleData.services} />
+          
+          <GMBProductsSection products={sampleData.products} />
         </div>
 
           <div className="space-y-6">
