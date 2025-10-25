@@ -104,7 +104,7 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
                   <Ruler className="h-5 w-5" />
                   <span className="text-base">Avg Resolution</span>
                 </div>
-                <p className="text-3xl font-bold text-sm">{avgResolution}</p>
+                <p className="text-3xl font-bold">{avgResolution}</p>
               </div>
             </div>
 
