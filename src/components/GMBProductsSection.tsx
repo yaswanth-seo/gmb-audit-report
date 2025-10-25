@@ -67,17 +67,17 @@ const ProductCard = ({ product }: { product: GMBProduct }) => {
             href={product.link_to_product}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 rounded-md text-sm font-medium leading-none bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3 transition-colors"
           >
             View on Google
-            <ExternalLink className="h-3 w-3" />
+            <ExternalLink className="size-4" />
           </a>
           {product.url && (
             <a
               href={product.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 transition-colors"
+              className="flex items-center justify-center rounded-md text-sm font-medium leading-none border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3 transition-colors"
             >
               Website
             </a>
