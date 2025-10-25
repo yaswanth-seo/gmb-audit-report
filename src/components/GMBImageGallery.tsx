@@ -85,55 +85,55 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <ImageIcon className="h-4 w-4" />
-                  <span className="text-sm">Total Images</span>
+                  <ImageIcon className="h-5 w-5" />
+                  <span className="text-base">Total Images</span>
                 </div>
-                <p className="text-2xl font-bold">{totalImages}</p>
+                <p className="text-3xl font-bold">{totalImages}</p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <Camera className="h-4 w-4" />
-                  <span className="text-sm">360° Photos</span>
+                  <Camera className="h-5 w-5" />
+                  <span className="text-base">360° Photos</span>
                 </div>
-                <p className="text-2xl font-bold">{threeSixtyCount}</p>
+                <p className="text-3xl font-bold">{threeSixtyCount}</p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <Ruler className="h-4 w-4" />
-                  <span className="text-sm">Avg Resolution</span>
+                  <Ruler className="h-5 w-5" />
+                  <span className="text-base">Avg Resolution</span>
                 </div>
-                <p className="text-2xl font-bold text-sm">{avgResolution}</p>
+                <p className="text-3xl font-bold text-sm">{avgResolution}</p>
               </div>
             </div>
 
             {/* Image Sources */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold">Image Sources</h4>
+              <h4 className="text-base font-semibold">Image Sources</h4>
               <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Business Owner</span>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-32 bg-muted rounded-full overflow-hidden">
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-medium text-muted-foreground w-32">Business Owner</span>
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="h-2.5 flex-1 max-w-xs bg-muted rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-primary" 
                         style={{ width: `${(ownerImages / totalImages) * 100}%` }}
                       />
                     </div>
-                    <span className="text-sm font-medium">{ownerImages}</span>
+                    <span className="text-base font-semibold min-w-[3rem] text-right">{ownerImages}</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Customers</span>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-32 bg-muted rounded-full overflow-hidden">
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-medium text-muted-foreground w-32">Customers</span>
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="h-2.5 flex-1 max-w-xs bg-muted rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-secondary" 
                         style={{ width: `${(customerImages / totalImages) * 100}%` }}
                       />
                     </div>
-                    <span className="text-sm font-medium">{customerImages}</span>
+                    <span className="text-base font-semibold min-w-[3rem] text-right">{customerImages}</span>
                   </div>
                 </div>
               </div>
@@ -142,15 +142,15 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
             {/* Upload Timeline */}
             {latestUpload && oldestUpload && (
               <div className="space-y-3">
-                <h4 className="text-sm font-semibold">Upload Timeline</h4>
+                <h4 className="text-base font-semibold">Upload Timeline</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <span className="text-xs text-muted-foreground">First Upload</span>
-                    <p className="text-sm font-medium">{formatDate(oldestUpload)}</p>
+                    <span className="text-sm text-muted-foreground">First Upload</span>
+                    <p className="text-base font-medium">{formatDate(oldestUpload)}</p>
                   </div>
                   <div className="space-y-1">
-                    <span className="text-xs text-muted-foreground">Latest Upload</span>
-                    <p className="text-sm font-medium">{formatDate(latestUpload)}</p>
+                    <span className="text-sm text-muted-foreground">Latest Upload</span>
+                    <p className="text-base font-medium">{formatDate(latestUpload)}</p>
                   </div>
                 </div>
               </div>
@@ -159,14 +159,14 @@ export default function GMBImageGallery({ images }: GMBImageGalleryProps) {
             {/* Top Contributors */}
             {topContributors.length > 0 && (
               <div className="space-y-3">
-                <h4 className="text-sm font-semibold flex items-center gap-2">
-                  <Users className="h-4 w-4" />
+                <h4 className="text-base font-semibold flex items-center gap-2">
+                  <Users className="h-5 w-5" />
                   Top Contributors
                 </h4>
                 <div className="space-y-2">
                   {topContributors.map(([name, count], index) => (
                     <div key={name} className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-base text-muted-foreground">
                         {index + 1}. {name}
                       </span>
                       <Badge variant="secondary">{count} photos</Badge>

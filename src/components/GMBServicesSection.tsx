@@ -119,30 +119,30 @@ export const GMBServicesSection = ({ services }: GMBServicesSectionProps) => {
       <CardContent className="space-y-4">
         {/* Stats Grid */}
         <div className="grid grid-cols-3 gap-3">
-          <div className="text-center p-3 bg-muted/50 rounded-lg">
-            <div className="text-2xl font-bold text-primary">{totalServices}</div>
-            <div className="text-xs text-muted-foreground">Total Services</div>
+          <div className="text-center p-4 bg-muted/50 rounded-lg">
+            <div className="text-4xl font-bold text-primary">{totalServices}</div>
+            <div className="text-sm font-medium text-muted-foreground">Total Services</div>
           </div>
-          <div className="text-center p-3 bg-muted/50 rounded-lg">
-            <div className="text-2xl font-bold text-primary">{categories.length}</div>
-            <div className="text-xs text-muted-foreground">Categories</div>
+          <div className="text-center p-4 bg-muted/50 rounded-lg">
+            <div className="text-4xl font-bold text-primary">{categories.length}</div>
+            <div className="text-sm font-medium text-muted-foreground">Categories</div>
           </div>
-          <div className="text-center p-3 bg-muted/50 rounded-lg">
-            <div className="text-2xl font-bold text-primary">{servicesWithPrice}</div>
-            <div className="text-xs text-muted-foreground">With Pricing</div>
+          <div className="text-center p-4 bg-muted/50 rounded-lg">
+            <div className="text-4xl font-bold text-primary">{servicesWithPrice}</div>
+            <div className="text-sm font-medium text-muted-foreground">With Pricing</div>
           </div>
         </div>
 
         {/* Service Coverage Analysis */}
         <div className="space-y-2">
-          <h4 className="text-sm font-medium">Service Distribution</h4>
+          <h4 className="text-base font-medium">Service Distribution</h4>
           {categories.map((category) => {
             const percentage = (category.services.length / totalServices) * 100;
             return (
               <div key={category.name} className="space-y-1">
-                <div className="flex justify-between text-xs">
-                  <span className="text-muted-foreground">{category.name}</span>
-                  <span className="font-medium">{category.services.length}</span>
+                <div className="flex justify-between text-sm">
+                  <span className="font-medium text-muted-foreground">{category.name}</span>
+                  <span className="font-semibold text-foreground">{category.services.length}</span>
                 </div>
                 <div className="h-2 bg-muted rounded-full overflow-hidden">
                   <div 
@@ -177,11 +177,11 @@ export const GMBServicesSection = ({ services }: GMBServicesSectionProps) => {
 
               return (
                 <AccordionItem key={category.name} value={category.name}>
-                  <AccordionTrigger className="text-sm hover:no-underline">
-                    <div className="flex items-center gap-2">
-                      <CategoryIcon className="h-4 w-4" />
-                      <span>{category.name}</span>
-                      <Badge variant="secondary" className="ml-auto mr-2">
+                  <AccordionTrigger className="text-base font-medium hover:no-underline py-4">
+                    <div className="flex items-center gap-3">
+                      <CategoryIcon className="h-5 w-5" />
+                      <span className="font-semibold">{category.name}</span>
+                      <Badge variant="secondary" className="ml-auto mr-2 text-sm px-2 py-1">
                         {category.services.length}
                       </Badge>
                     </div>
@@ -196,15 +196,15 @@ export const GMBServicesSection = ({ services }: GMBServicesSectionProps) => {
                           >
                             <span className="text-muted-foreground mt-1">•</span>
                             <div className="flex-1 min-w-0">
-                              <div className="text-sm font-medium">{service.name}</div>
+                              <div className="text-base font-semibold">{service.name}</div>
                               {service.price && (
-                                <div className="flex items-center gap-1 text-xs text-muted-foreground mt-0.5">
-                                  <DollarSign className="h-3 w-3" />
-                                  {service.price}
+                                <div className="flex items-center gap-1 text-sm text-muted-foreground mt-1">
+                                  <DollarSign className="h-4 w-4" />
+                                  <span className="font-medium">{service.price}</span>
                                 </div>
                               )}
                               {service.description && (
-                                <div className="text-xs text-muted-foreground mt-0.5">
+                                <div className="text-sm text-muted-foreground mt-1 leading-relaxed">
                                   {service.description}
                                 </div>
                               )}
