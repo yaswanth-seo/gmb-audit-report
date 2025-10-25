@@ -1,5 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Star, MessageSquare, Image, Clock } from "lucide-react";
+import ReviewFrequencyChart from "./ReviewFrequencyChart";
+
+interface Review {
+  timestamp: number;
+  time?: string;
+}
 
 interface BusinessStatsProps {
   data: {
@@ -8,9 +14,10 @@ interface BusinessStatsProps {
     image_count: number;
     review_summary: { [key: number]: number };
   };
+  reviews?: Review[];
 }
 
-export const BusinessStats = ({ data }: BusinessStatsProps) => {
+export const BusinessStats = ({ data, reviews = [] }: BusinessStatsProps) => {
   const stats = [
     {
       label: "Average Rating",
@@ -82,6 +89,9 @@ export const BusinessStats = ({ data }: BusinessStatsProps) => {
           })}
         </div>
       </Card>
+
+      {/* Review Frequency Chart */}
+      {reviews && reviews.length > 0 && <ReviewFrequencyChart reviews={reviews} />}
     </div>
   );
 };

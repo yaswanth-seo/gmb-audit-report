@@ -39,6 +39,7 @@ const sampleData = {
       user_name: "Nikolay Arabadzhiev",
       user_photo: "https://lh3.googleusercontent.com/a/AATXAJyIg6ssMcqhCVaNSp7IviNlObOt-UwihkC0oJCo=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "2 years ago",
+      timestamp: 1665849600,
       rating: 5,
       content: "I didn't expect the rest will be that good. OMG, the carpet looks brand new now. Thank you so much for your hard work. Highly Recommended. Thank you",
       review_likes: 0,
@@ -52,6 +53,7 @@ const sampleData = {
       user_name: "Milena Obretenova",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14Gh7BtItkv22y2n_5Bduby2uiY2afylsvB8SqEoDbfk=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "2 years ago",
+      timestamp: 1672531200,
       rating: 5,
       content: "Highly recommend premium carpet clean .In my living room carpet was really bad with lots of stains .   the carpet looks like new  now. i couldn't believe   the stains gave gone.Great work from Kiro .Well done",
       review_likes: 0,
@@ -65,6 +67,7 @@ const sampleData = {
       user_name: "Madeline Holder",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14GhRm9lXvhxeTt0UvSnOVn0IA894tktNzjLClVsc=s40-c-c0x00000000-cc-rp-mo-ba2-br100",
       time_text: "3 years ago",
+      timestamp: 1634054400,
       rating: 4,
       content: "Punctual, efficient, friendly and very professional team . I will be using Premium Carpet Cleaning Service again. Highly recommend.",
       review_likes: 0,
@@ -78,6 +81,7 @@ const sampleData = {
       user_name: "A.M G",
       user_photo: "https://lh3.googleusercontent.com/a/AATXAJzxP2En27v8HutsKz-glf-gRvSnaZo9_zQH3F4L=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1628640000,
       rating: 5,
       content: "The carpet stain was big and very difficult to clean as when the accident happened I watched youtube videos and try to clean by myself, of course it made it much worse. Kiril from Premium Carpet Cleaning was very friendly and professional, he found varies solution to make the carpet back to normal. After a few visit the carpet is in very good condition. Highly recommend!",
       review_likes: 0,
@@ -91,6 +95,7 @@ const sampleData = {
       user_name: "Tina Manolova",
       user_photo: "https://lh3.googleusercontent.com/a/AATXAJyJh0ELd0_wVxWzCNenDzgU7I_yhkm8X6qDmPrH=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1620950400,
       rating: 5,
       content: "Kitil did my carpet today. I am impress with thr service. The carpet looks like new. Thank you so much. Highly recommended",
       review_likes: 0,
@@ -104,6 +109,7 @@ const sampleData = {
       user_name: "Paul Edwards",
       user_photo: "https://lh3.googleusercontent.com/a/AATXAJxkRx-421RMvxaj9ZtMf9HWc4Nf1MBLc_o1r0Jd=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1697328000,
       rating: 5,
       content: "At Waste King they have cleaned our carpets for years. Great service and cost",
       review_likes: 0,
@@ -117,6 +123,7 @@ const sampleData = {
       user_name: "Gareth Reed",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14GjeMaYIE4N5jNsf671dK9D7_t3ri_qS4z5zUDiDpA=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1704067200,
       rating: 5,
       content: "Very professional, and a great guy as well. We had our carpets cleaned as well as a couch. Perfect job, nothing was a fuss, provided plenty of entertainment. Very VERY good value for money.",
       review_likes: 0,
@@ -130,6 +137,7 @@ const sampleData = {
       user_name: "Paul Angus",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14Gj7codAWvy0PkelKknln5xgOD9rf7TkColXgZeL8IA=s40-c-c0x00000000-cc-rp-mo-ba4-br100",
       time_text: "3 years ago",
+      timestamp: 1709251200,
       rating: 5,
       content: "Friendly guys, cleaned 2 sofas and a set of dining chairs, didn't take too long, but with great results.",
       review_likes: 0,
@@ -143,6 +151,7 @@ const sampleData = {
       user_name: "Mariya Dragova",
       user_photo: "https://lh3.googleusercontent.com/a/AATXAJxNtLiY4iavxicV8x-GjAcUPxN7ZFDjp8mDWMtG=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1714521600,
       rating: 5,
       content: "Kiril is very professional carpet cleaner. He removed all the stains, i was suprired. Highly recommend. Thabk you so much.",
       review_likes: 1,
@@ -156,6 +165,7 @@ const sampleData = {
       user_name: "Victoria Chapman",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14Gjwa7BEgnWsSuyqThJ2I9TdA4XOE1alAmLNso4a=s40-c-c0x00000000-cc-rp-mo-br100",
       time_text: "3 years ago",
+      timestamp: 1719878400,
       rating: 5,
       content: "Very happy with the carpet clean.  Professional, friendly, quick and a good cleaning result.  Would use again.",
       review_likes: 0,
@@ -169,6 +179,7 @@ const sampleData = {
       user_name: "Ivo ANDRADE",
       user_photo: "https://lh3.googleusercontent.com/a-/AOh14Ghp_iFkvIu9PhTGoYbC8FdjOv6RPrs6bNH58iDT=s40-c-c0x00000000-cc-rp-mo-ba3-br100",
       time_text: "3 years ago",
+      timestamp: 1725235200,
       rating: 5,
       content: "Very friendly staff, very professional, we called several times and were always very well attended.",
       review_likes: 0,
@@ -254,7 +265,7 @@ const Index = () => {
 
         <div className="grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
-            <BusinessStats data={sampleData} />
+            <BusinessStats data={sampleData} reviews={sampleData.reviews} />
             <ReviewsSection 
               reviews={sampleData.reviews} 
               totalReviews={sampleData.review_count}
