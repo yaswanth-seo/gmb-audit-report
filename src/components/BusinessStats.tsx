@@ -57,7 +57,7 @@ export const BusinessStats = ({ data }: BusinessStatsProps) => {
       </div>
 
       {/* Rating Distribution */}
-      <Card className="p-4 sm:p-6">
+      <Card className="p-4 sm:p-6 overflow-hidden">
         <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Rating Distribution</h3>
         <div className="space-y-3">
           {[5, 4, 3, 2, 1].map((rating) => {
@@ -65,18 +65,18 @@ export const BusinessStats = ({ data }: BusinessStatsProps) => {
             const percentage = data.review_count > 0 ? (count / data.review_count) * 100 : 0;
             
             return (
-              <div key={rating} className="flex items-center gap-3">
-                <div className="flex items-center gap-1 w-16">
-                  <span className="text-sm font-medium text-foreground">{rating}</span>
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <div key={rating} className="flex items-center gap-2 sm:gap-3">
+                <div className="flex items-center gap-0.5 sm:gap-1 w-12 sm:w-16 flex-shrink-0">
+                  <span className="text-xs sm:text-sm font-medium text-foreground">{rating}</span>
+                  <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
                 </div>
-                <div className="flex-1 bg-secondary rounded-full h-2 overflow-hidden">
+                <div className="flex-1 min-w-0 bg-secondary rounded-full h-2 overflow-hidden">
                   <div
                     className="bg-gradient-to-r from-primary to-accent h-full transition-all"
                     style={{ width: `${percentage}%` }}
                   />
                 </div>
-                <span className="text-sm text-muted-foreground w-12 text-right">{count}</span>
+                <span className="text-xs sm:text-sm text-muted-foreground w-8 sm:w-12 text-right flex-shrink-0">{count}</span>
               </div>
             );
           })}
