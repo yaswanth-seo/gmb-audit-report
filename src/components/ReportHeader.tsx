@@ -52,7 +52,7 @@ export const ReportHeader = ({ data }: ReportHeaderProps) => {
                   <div className="flex items-center gap-2">
                     <Globe className="h-4 w-4" />
                     <a href={data.website[0]} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">
-                      Website
+                      {new URL(data.website[0]).hostname.replace('www.', '')}
                     </a>
                   </div>
                 )}
