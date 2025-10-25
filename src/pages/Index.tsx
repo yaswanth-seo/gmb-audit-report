@@ -9,6 +9,7 @@ import { GoogleLinks } from "@/components/GoogleLinks";
 import GMBImageGallery from "@/components/GMBImageGallery";
 import { GMBServicesSection } from "@/components/GMBServicesSection";
 import { GMBProductsSection } from "@/components/GMBProductsSection";
+import { GMBQASection } from "@/components/GMBQASection";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -626,6 +627,148 @@ const sampleData = {
     { name: "Wool Carpets", description: "Specialized gentle cleaning treatment for delicate wool carpets using pH-balanced solutions that protect natural fibers.", price: "From £35 per room", category: "Carpet cleaning service" },
     { name: "Wool Rugs", description: "Expert care for wool rugs with natural, eco-friendly cleaning agents. Hand-brushed and air-dried for optimal results.", price: "From £50", category: "Carpet cleaning service" },
   ],
+  questions: [
+    {
+      user_name: "Mike Blumenthal",
+      user_id: "114463183691836121484",
+      question: "Does Barbara Oliver do custom jewelry design?",
+      id: "AIe9_BFMK6FB7k24ANEBV5CospTTsZOMHlc7S9pPxoIsCTrfc6zQgoXKhXUXFVyJ1EkyGWQzAioFQij2PWLRBG2C5d-vtwobhpLy_Ey7hezz4zvEmg0xnrl-Uck5p_oD8Vumm4hzDnu2",
+      answers: [
+        {
+          user_name: "Ashley Rizzo",
+          user_id: "114764999785564232331",
+          timestamp: 1586800312,
+          time_text: "2 years ago",
+          time: "2020-04-13 20:51:52",
+          answer: "Yes. Barbara is both thoughtful and thorough when doing custom designs, and the results are always stunning!"
+        },
+        {
+          user_name: "Scott Benedict",
+          user_id: "105893003565839686499",
+          timestamp: 1586800312,
+          time_text: "2 years ago",
+          time: "2020-04-13 20:51:52",
+          answer: "Barbara does beautiful custom jewelry."
+        }
+      ]
+    },
+    {
+      user_name: "Mike Blumenthal",
+      user_id: "114463183691836121484",
+      question: "Are you open during the Covid virus crisis?",
+      id: "AIe9_BFMK6FB7k24ANEBV5CospTT1W7ba_n7Vm0w9ioPuKoT0mWv7panhSO3iYfxlBuC5ftO5VY2bwRaYYduu-sKoRzNTXiIwlKnqif-g3Bk1CODmvFp-0FHLA4lhXrFNqp3jMf2nQgv",
+    },
+    {
+      user_name: "Barbara Oliver Jewelry (Owner)",
+      question: "Do you custom design jewelry?",
+      id: "AIe9_BFL0OZrFaHgoJtqifT1GHrILd7e9uYvMhsc7AgFgLWBlxU_eH-JDmuti8_1_G0xcdyugD4b1OhdlCAoc9yXjKg-DZuv6ZFCoWCjXaGfQPdBSeiiXhiTe2FovKFbG96P2r1vcK44",
+      answers: [
+        {
+          user_name: "Keith Rowsey",
+          user_id: "102952538073453398992",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "Yes she does... Beautifully"
+        },
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "Absolutely! We would be honored to work with you and create a custom piece of jewelry that reflects your vision and desires. We will make it your signature piece, never to be duplicated again. Barbara is a graduate gemologist with 30 years of experience and has designed countless pieces."
+        }
+      ]
+    },
+    {
+      user_name: "Barbara Oliver Jewelry (Owner)",
+      question: "Do you do jewelry repairs?",
+      id: "AIe9_BFL0OZrFaHgoJtqifT1GHrIDSlYLzsNgNF6BGZ0YkcBqcL2VhTTWJzEAoEE863Zsn6T6PPY_JG9PAgbG6Ux9BDiUTZ6teiHJT71yPabjd68Omi5GpzxmSpAssg1L8nGFiMcV73c",
+      answers: [
+        {
+          user_name: "DaVinci 104.06",
+          user_id: "112503871592848889715",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "They do, and her work is very good. You are getting great customer service on top of your piece mended."
+        },
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "Yes, we do all types of jewelry repairs including ring resizing, replacing missing stones and more."
+        }
+      ]
+    },
+    {
+      user_name: "Barbara Oliver Jewelry (Owner)",
+      question: "Are you in an office building? Do you have parking?",
+      id: "AIe9_BFL0OZrFaHgoJtqifT1GHrI-UdETQk2v7lMcVxK6JuBLezLcmuRrPbrOZGWcyqkEXNpOU5X9e1xU1m_5Edd5g589tl6SboW17YlbXN8HL9QBVuzVA9YfvpHmmlmq5wT48OLT0dW",
+      answers: [
+        {
+          user_name: "Marissa Felser-Gilbert",
+          user_id: "114148966474911618567",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "Yes, she is located on the third floor of an office building.  There is a parking lot behind it."
+        },
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641914,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:54",
+          answer: "Yes, we are on the third floor of the Caldwell Building. A large parking lot and the entrance are located at the back of the building."
+        }
+      ]
+    },
+    {
+      user_name: "Barbara Oliver Jewelry (Owner)",
+      question: "Do I need to leave my jewelry to be appraised?",
+      id: "AIe9_BFL0OZrFaHgoJtqifT1GHrIkB8Io67iqzzd9_3YSjlob3bf167m2Hqns0Ag5TrCzMT_l6jovAqzzip2FuJ6h5hhZDfY3pYzKRNupe470OwRdh0RAhqwwyNdDtXCqS6InUqaBssx",
+      answers: [
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641915,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:55",
+          answer: "Typically we do appraisals on the spot, so you don't have to leave your jewelry. There are some exceptions. For example, if you have numerous pieces for an estate that need to be appraised, we may ask you to leave those pieces. FYI: We are a walk-in shop, so we do appraisals in-between customers. If you can come during the week instead of Saturday, our busiest day, that would be greatly appreciated."
+        }
+      ]
+    },
+    {
+      user_name: "Kryton Kryton",
+      user_id: "115966726481870746721",
+      question: "What is the charge for an appraisal?",
+      id: "AIe9_BExcxslmE1rr7n5jMcadSKeQNzCAAQCFhFBL5tal4-t4wsdoFDXiddH6diTLYqNPdIerXl2PLdUT7MGKACbTxYBwkpYzfjiCXDE1eQM9EJ2DcQJj09MLiOWcJMWyn2LbzsuwKX-",
+      answers: [
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641915,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:55",
+          answer: "If you would like a verbal review to determine how much a piece is worth or exactly what it is, we provide this as a complimentary service. If you need a written appraisal for insurance with complete documentation, there is a $45 charge per piec."
+        }
+      ]
+    },
+    {
+      user_name: "Kryton Kryton",
+      user_id: "115966726481870746721",
+      question: "Can you resize my ring if I didn't buy it from you?",
+      id: "AIe9_BExcxslmE1rr7n5jMcadSKe8704rNixvo8HHxIDxbNzykaHYjhDGd9mZ_xUbVAWqBTCavOq9dQD91nRj0TZ4rC8DowFZY9EV4c01b212VODzpCYSg_TVNr7YcEUHZp2vAjsRrbG",
+      answers: [
+        {
+          user_name: "Barbara Oliver Jewelry (Owner)",
+          timestamp: 1523641916,
+          time_text: "4 years ago",
+          time: "2018-04-13 20:51:56",
+          answer: "Yes, we will gladly size your ring even if you didn't buy it from us."
+        }
+      ]
+    }
+  ],
 };
 
 const Index = () => {
@@ -669,7 +812,8 @@ const Index = () => {
               totalReviews={sampleData.review_count}
               allReviewsLink={sampleData.links.reviews}
             />
-          <GMBImageGallery images={sampleData.images} />
+            <GMBQASection questions={sampleData.questions} />
+            <GMBImageGallery images={sampleData.images} />
           
           <GMBServicesSection services={sampleData.services} />
           
