@@ -12,6 +12,8 @@ interface BusinessDetailsProps {
     appointments_url?: string;
     place_id: string;
     cid: number;
+    fact_id?: string;
+    kg_id?: string;
   };
 }
 
@@ -86,6 +88,18 @@ export const BusinessDetails = ({ data }: BusinessDetailsProps) => {
               <span className="text-muted-foreground">CID</span>
               <span className="text-foreground font-mono text-xs">{data.cid}</span>
             </div>
+            {data.fact_id && (
+              <div className="flex justify-between text-sm">
+                <span className="text-muted-foreground">Fact ID</span>
+                <span className="text-foreground font-mono text-xs">{data.fact_id}</span>
+              </div>
+            )}
+            {data.kg_id && (
+              <div className="flex justify-between text-sm">
+                <span className="text-muted-foreground">KG ID</span>
+                <span className="text-foreground font-mono text-xs">{data.kg_id}</span>
+              </div>
+            )}
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">Location</span>
               <span className="text-foreground">{data.city}, {data.country_code.toUpperCase()}</span>

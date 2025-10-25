@@ -4,6 +4,8 @@ import { OpeningHours } from "@/components/OpeningHours";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { CompetitorInsights } from "@/components/CompetitorInsights";
 import { BusinessDetails } from "@/components/BusinessDetails";
+import { GoogleMapsEmbed } from "@/components/GoogleMapsEmbed";
+import { GoogleLinks } from "@/components/GoogleLinks";
 import { Button } from "@/components/ui/button";
 import { Download, Calendar } from "lucide-react";
 
@@ -19,6 +21,8 @@ const sampleData = {
   rating: 4.9,
   cid: 4569775912639662016,
   place_id: "ChIJR4ox4_gddkgRwAcGGPsaaz8",
+  fact_id: "0x48761df8e3318a47:0x3f6b1afb180607c0",
+  kg_id: "/g/11bz0ng4qp",
   address: "7A Longton Grove, London SE26 6QQ, United Kingdom",
   categories: ["Carpet cleaning service"],
   image_count: 34,
@@ -105,6 +109,16 @@ const sampleData = {
       social_url: "https://maps.google.com/?cid=1894066965694305454",
     },
   ],
+  links: {
+    listing: "https://maps.google.com/?cid=4569775912639662016",
+    knowledge_graph: "https://www.google.com/search?q=Premium+Carpet+Cleaning&kponly&kgmid=/g/11bz0ng4qp",
+    knowledge_graph_short: "http://g.co/kg/g/11bz0ng4qp",
+    local_finder: "https://www.google.bg/search?q=Premium+Carpet+Cleaning&tbm=lcl#rlfi=si:4569775912639662016",
+    photos: "https://www.google.com/maps/uv?pb=!1s0x0:0x3f6b1afb180607c0!2m5!2m2!1i80!2i80!3m1!2i100!3m1!7e1!4s",
+    reviews: "https://search.google.com/local/reviews?placeid=ChIJR4ox4_gddkgRwAcGGPsaaz8",
+    reviews_write: "https://search.google.com/local/writereview?placeid=ChIJR4ox4_gddkgRwAcGGPsaaz8",
+  },
+  embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75931.9600640659!2d-2.472455102734396!3d53.5064506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42bc3ace0ff2e86d%3A0xcf06ff10890a2c84!2sSupreme%20Carpet%20Care%20ltd!5e0!3m2!1sen!2suk!4v1761405541042!5m2!1sen!2suk",
 };
 
 const Index = () => {
@@ -147,6 +161,8 @@ const Index = () => {
           </div>
 
           <div className="space-y-6">
+            <GoogleMapsEmbed embedUrl={sampleData.embed_url} businessName={sampleData.name} />
+            <GoogleLinks links={sampleData.links} />
             <OpeningHours hours={sampleData.open_hours} />
             <BusinessDetails data={sampleData} />
             <CompetitorInsights competitors={sampleData.also_search_for} />
