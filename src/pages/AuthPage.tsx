@@ -7,48 +7,44 @@ import { useMockAuth } from "@/hooks/useMockAuth";
 import { mockData } from "@/lib/mockData";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 export default function AuthPage() {
   const navigate = useNavigate();
-  const { isAuthenticated, isLoading, signInWithGoogle, signInAsGuest } = useMockAuth();
-  const { toast } = useToast();
-
+  const {
+    isAuthenticated,
+    isLoading,
+    signInWithGoogle,
+    signInAsGuest
+  } = useMockAuth();
+  const {
+    toast
+  } = useToast();
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       navigate("/dashboard");
     }
   }, [isAuthenticated, isLoading, navigate]);
-
   const handleGoogleSignIn = () => {
     const user = signInWithGoogle();
     mockData.initializeSampleReports(user.id);
-    
     toast({
       title: "Welcome!",
-      description: "You've been signed in successfully. You have 5 free credits!",
+      description: "You've been signed in successfully. You have 5 free credits!"
     });
-    
     navigate("/dashboard");
   };
-
   const handleGuestSignIn = () => {
     const user = signInAsGuest();
     mockData.initializeSampleReports(user.id);
-    
     toast({
       title: "Welcome, Guest!",
-      description: "You're browsing as a guest with 5 free credits.",
+      description: "You're browsing as a guest with 5 free credits."
     });
-    
     navigate("/dashboard");
   };
-
   if (isLoading) {
     return null;
   }
-
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
+  return <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-4">
       <Card className="w-full max-w-md p-8 space-y-6">
         <div className="text-center space-y-2">
           <div className="h-16 w-16 rounded-xl bg-primary flex items-center justify-center mx-auto mb-4">
@@ -67,19 +63,10 @@ export default function AuthPage() {
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-card px-2 text-muted-foreground">Or</span>
-            </div>
+            
           </div>
 
-          <Button
-            variant="outline"
-            className="w-full"
-            onClick={handleGuestSignIn}
-          >
-            Continue as Guest
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          
         </div>
 
         <div className="text-center text-xs text-muted-foreground">
@@ -92,6 +79,5 @@ export default function AuthPage() {
           </p>
         </div>
       </Card>
-    </div>
-  );
+    </div>;
 }
