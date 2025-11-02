@@ -29,7 +29,7 @@ export const mockAuth = {
       id: `user-${Date.now()}`,
       name: "Demo User",
       email: "demo@example.com",
-      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=Demo${Date.now()}`,
+      avatar: `https://api.dicebear.com/7.x/initials/svg?seed=DemoUser&backgroundColor=4F46E5`,
       credits: 5,
       createdAt: new Date().toISOString(),
     };
@@ -37,22 +37,6 @@ export const mockAuth = {
     localStorage.setItem(MOCK_AUTH_KEY, "true");
     localStorage.setItem(MOCK_USER_KEY, JSON.stringify(newUser));
     return newUser;
-  },
-
-  // Sign in as guest (mock)
-  signInAsGuest(): MockUser {
-    const guestUser: MockUser = {
-      id: `guest-${Date.now()}`,
-      name: "Guest User",
-      email: "guest@example.com",
-      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=Guest${Date.now()}`,
-      credits: 5,
-      createdAt: new Date().toISOString(),
-    };
-
-    localStorage.setItem(MOCK_AUTH_KEY, "true");
-    localStorage.setItem(MOCK_USER_KEY, JSON.stringify(guestUser));
-    return guestUser;
   },
 
   // Sign out

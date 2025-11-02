@@ -35,13 +35,6 @@ export const useMockAuth = () => {
     return newUser;
   };
 
-  const signInAsGuest = () => {
-    const guestUser = mockAuth.signInAsGuest();
-    setUser(guestUser);
-    setIsAuthenticated(true);
-    return guestUser;
-  };
-
   const signOut = () => {
     mockAuth.signOut();
     setUser(null);
@@ -58,7 +51,6 @@ export const useMockAuth = () => {
     isAuthenticated,
     isLoading,
     signInWithGoogle,
-    signInAsGuest,
     signOut,
     refreshUser,
   };
