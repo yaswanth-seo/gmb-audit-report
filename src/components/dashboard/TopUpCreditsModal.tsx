@@ -79,7 +79,8 @@ export const TopUpCreditsModal = ({ open, onOpenChange }: TopUpCreditsModalProps
 
           <div className="rounded-lg bg-muted/30 p-4">
             <p className="text-xs text-muted-foreground text-center">
-              I'll get the credits added to your account once everything is ready. Feel free to reach out anytime!
+              I'll manually add credits to your account after payment confirmation.
+              Credits are typically added within 24 hours.
             </p>
           </div>
         </div>
